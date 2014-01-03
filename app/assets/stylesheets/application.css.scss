@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+$background_color: lightgrey;
+$nav_color: #222222;
+
+@for $i from  1 through 3 {
+	.box#{$i} {
+		margin-right: 20px;
+	  	@if $i == 1 {
+	  		height: 30px;
+	  	}@else if $i == 2 {
+	  		height: 60px;
+	  	}@else{
+	  		height: 120px;
+	  	}
+	}
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+section.col-sm-1 {
+	background: $nav_color;
+	position: fixed;
+	height: 100%;
+	@media screen and (max-width: 950px) {
+		display: none;
+	}
+}
+nav{
+	&.navbar-inverse {
+		border-color: $nav_color;
+	}
+}
+	
+.container{
+	margin-top: 50px;
+}
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	background: $background_color;
+}
+
+

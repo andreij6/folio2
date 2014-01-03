@@ -8,8 +8,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-		<%= yield %>
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<%= link_to "Andre' Jones", root_path, :class=>"navbar-brand"%>
+	</nav>
+	<section class="col-sm-1">
+		
+	</section>
+	<div class="wrapper">
+		<div class="container">
+			<%= yield %>
+		</div>
 	</div>
 </body>
 </html>
