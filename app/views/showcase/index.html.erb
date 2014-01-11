@@ -1,20 +1,58 @@
-<div>
-	<h1>
-		Andre' Jones
-	</h1>
-	<p>this is some stuff</p>
-</div>
-<div class="col-md-3">
-	<div class="col-md-12 well box1">
-		hi
+<div class="col-md-12">
+	<h1 class="Mont" id="title">Help Andre' Become a Web Developer</h1>
+	<div class="profile_image col-md-12">
+		<%= image_tag "Profile.png" %>
 	</div>
-	<div class="col-md-12 well box1">
-		hi
-	</div>
+
+	<div class="col-md-6">
+		<h1 class="Mont">Andre'<span>Jones</span></h1><hr/>
+		<h2 class="Mont">University of Arkansas<small>Geography</small></h2>
+		
+		<p> "I have been accepted to <%= link_to "MakerSquare", "http://www.themakersquare.com/"%>, a software development program in Austin, Texas. I want to combine Software Development with my knowledge of Geospatial Technologies to help shape the future of the industry."</p>
+		</div>
+		<div class="col-md-6" id="donate">
+			<h2 class="Mont">Donations</h2>
+			<%= donate_bitcoin %><%= donate_paypal %>
+			<div id="myfirstchart" style="height: 250px;" ></div>
+		</div>
+	
 </div>
-<div class="col-md-3 well box2">
-	hi
+
+<section class="col-md-6">
+	<h2 class="Mont">Becoming a Software Developer: <br/><small>Since September 2012</small></h2><hr/>
+	<p>"Here is how I have prepared thus far."</p>
+	<ul id="study">
+		<li><%= link_to "Teamtreehouse", "http://teamtreehouse.com/andrejones"%>
+			<br/><% @tree.badges.each do |title, image| %>
+			<%= image_tag image, :alt => title, :class => "badges", :title => title%>
+			<% end %><br/>
+		</li>
+		<li><%= link_to "Codecademy", "http://www.codecademy.com/andreij6"%></li>
+		<li><%= link_to "RubyMonk", "https://rubymonk.com/u/andre-jones"%></li>
+		<li><%= link_to "Github", "https://github.com/andreij6" %></li>
+		<li><%= link_to "CodeSchool", "https://www.codeschool.com/users/408724"%></li>
+		<li><%= link_to "Lynda", "#"%></li>
+		<li><%= link_to "And More....", "#"%></li>
+	</ul>
+</section>
+
+<div class="col-md-6"><%= image_tag "accepted.png" %></div><br/><hr/>
+<div class="col-md-12">
+	    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'donations'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
 </div>
-<div class="col-md-3 well box3">
-	hi
-</div>
+
+

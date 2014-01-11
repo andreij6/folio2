@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
+  <title>Aspiring Web Dev</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
   <%= javascript_include_tag "application"%>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<%= link_to "Andre' Jones", root_path, :class=>"navbar-brand"%>
+	<div class="container">
+		<p>Share so that I can reach as many people as possible. <%= (Date.parse("23/1/2014") - Date.today).to_i %> days to reserve my spot. <%= (Date.parse("7/2/2014") - Date.today).to_i %> days to pay in full</p>
+		<a href="https://twitter.com/intent/tweet?button_hashtag=Donate&text=<%= message %>" class="twitter-hashtag-button" data-lang="en" data-related="s3nojA">Tweet #Donate</a>
+		<div class="g-plusone"></div>
+	</div>
 	</nav>
 	<section class="col-sm-1">
 		
@@ -20,5 +30,13 @@
 			<%= yield %>
 		</div>
 	</div>
+	<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>

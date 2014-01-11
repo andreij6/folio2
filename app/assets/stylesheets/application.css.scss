@@ -30,6 +30,7 @@ $nav_color: #222222;
 html, body {
 	height: 100%;
 	width: 100%;
+	background-color: $background_color;
 }
 
 section.col-sm-1 {
@@ -41,8 +42,16 @@ section.col-sm-1 {
 	}
 }
 nav{
+  padding: 7px;
 	&.navbar-inverse {
 		border-color: $nav_color;
+	}
+	.container {
+	  margin-top: 0px;
+	}
+	p {
+	  color: lightgrey;
+	  font-family: 'Raleway', sans-serif;
 	}
 }
 	
@@ -54,6 +63,75 @@ nav{
 	height: 100%;
 	width: 100%;
 	background: $background_color;
+	padding-top: 50px;
 }
+
+.profile_image {
+  height: 250px;
+  background-color: rgb(192, 13, 7);
+  margin-bottom: 20px;
+  img {
+   width: 150px;
+   height: 150px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -75px;
+   margin-top: -75px;
+  }
+}
+
+.Mont {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  span {
+    font-weight: normal;
+    color: #555;
+  }
+  #title {
+    text-align: center;
+  }
+}
+
+h2.Mont {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+}
+
+#donate {
+  border-top: 5px solid #FAFAFA;
+  overflow: hidden;
+}
+
+p {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  a {
+    color: #579DCA;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.badges {
+  height: 30px;
+  width: 30px;
+}
+
+#study {
+  list-style-type: none;
+    a {
+    color: #444;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+
 
 
